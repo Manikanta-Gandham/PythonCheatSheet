@@ -43,6 +43,7 @@ nums.extend(someOtherList) # ...
 nums.pop() # pops last element [which element to pop can also be given as optional argument]
 nums.reverse() # reverses original list (nums in this case)
 nums.sort() # sorts list [does NOT return sorted list]
+nums.sort(reverse=True) # sort list INPLACE descending order
 #Python's default sort uses Tim Sort, which is a combination of both merge sort and insertion sort.
 
 nums = sorted(nums) # sorts and returns new list
