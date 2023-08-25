@@ -107,6 +107,13 @@ equivalent to a[slice(None, None, -1)].
 While the :-based notation is very helpful for simple slicing, the explicit use
 of slice() objects simplifies the programmatic generation of slicing.
 ```
+## stacks
+> stacks works on the principle last in first out like rice in box. last cup in box gets out first
+```python
+stack = [1,2,3]
+
+stack.append(4) #[1,2,3,4]
+stack.pop() #[1,2,3]
 
 ## Dictionary
 
