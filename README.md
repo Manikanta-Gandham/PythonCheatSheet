@@ -119,9 +119,12 @@ of slice() objects simplifies the programmatic generation of slicing.
 ```python
 dict = {'a':1,'b':2,'c':3}
 
+if "d" in dict:
+    print(d is in dict)  #returns true if d exists else false
 dict.keys() # returns list of keys of dictionary
 dict.values() # returns list of values of dictionary
 dict.get('a', 'default') # returns value for any corresponding key, default if not exists
+dict.get('d') # returns None if key doesn't exists
 dict.items() # returns [('a',1),('b',2),('c',3)]
 dict.copy() # returns copy of the dictionary
 # NOTE : items() Returns view object that will be updated with any future
