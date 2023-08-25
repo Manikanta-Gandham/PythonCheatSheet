@@ -121,7 +121,7 @@ dict = {'a':1,'b':2,'c':3}
 
 dict.keys() # returns list of keys of dictionary
 dict.values() # returns list of values of dictionary
-dict.get('a') # returns value for any corresponding key
+dict.get('a', 'default') # returns value for any corresponding key, default if not exists
 dict.items() # returns [('a',1),('b',2),('c',3)]
 dict.copy() # returns copy of the dictionary
 # NOTE : items() Returns view object that will be updated with any future
