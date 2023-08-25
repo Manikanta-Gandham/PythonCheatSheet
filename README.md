@@ -115,6 +115,7 @@ stack = [1,2,3]
 stack.append(4) #[1,2,3,4]
 stack.pop() #[1,2,3]
 
+```
 ## Dictionary
 
 > Dictionaries are used to store data values in key:value pairs. *Info about **collections.Counter()** available below.*
