@@ -114,7 +114,6 @@ stack = [1,2,3]
 
 stack.append(4) #[1,2,3,4]
 stack.pop() #[1,2,3]
-
 ```
 ## Dictionary
 
