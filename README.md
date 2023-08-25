@@ -146,38 +146,127 @@ dict.update({KEY:VALUE})
 # an element of type 'list' will be made for a Key that does not exist
 myDictionary = defaultdict(list) 
 ```
+## Strings
 
-## Counter
-
-> Python Counter is a container that will hold the count of each of the elements present in the container. The counter is a sub-class available inside the dictionary class. Specifically used for element frequencies
-> 
-
-*Pretty similar to dictionary, in fact I use* **defaultdict(int)** *most of the time* 
+[Python String isnumeric()](https://www.programiz.com/python-programming/methods/string/isnumeric)
 
 ```python
-from collections import Counter #(capital 'C')
-# can also be used as 'collections.Counter()' in code
+# ** split Function **
+# The split() method breaks up a string at the specified separator and returns
+# a list of strings.
+text = 'Python is a fun programming language'
 
-list1 = ['x','y','z','x','x','x','y', 'z']
+# split the text from space
+print(text.split(' '))
+# Output: ['Python', 'is', 'a', 'fun', 'programming', 'language']
 
-# Initialization
-Counter(list1) # => Counter({'x': 4, 'y': 2, 'z': 2})
-Counter("Welcome to Guru99 Tutorials!") # => Counter({'o': 3, ' ': 3, 'u': 3, 'e': 2.....})
+# convert string to list
+s="abcd"
+s=list(s)
+print(s)
+# Output: ['a', 'b', 'c', 'd']
 
-# Updating
-counterObject = collections.Counter(list1)
-counterObject.keys() = [ 'x' , 'y' , 'z' ]
-most_common_element = counterObject.most_common(1) # [('x', 4)]
-counterObject.update("some string") # => Counter({'o': 3, 'u': 3, 'e': 2, 's': 2})
-counterObject['s'] += 1 # Increase/Decrease frequency
+# ** count Function **
+# The count() method returns the number of occurrences of a substring in the given string.
+# Example
+message = 'python is popular programming language'
+# number of occurrence of 'p'
+print('Number of occurrence of p:', message.count('p')) # Output: Number of occurrence of p: 4
 
-# Accessing
-frequency_of_s = counterObject['s']
+# The isnumeric() method returns True if all characters in a string are numeric characters. If not, it returns False.
+s = '1242323'
+print(s.isnumeric()) #Output: True
 
-# Deleting
-del couterObject['s']
+# The find() method returns the index of first occurrence of the substring (if found). If not found, it returns -1.
+# check the index of 'fun'
+print(message.find('fun')) # Output: 12
 
+# The isalnum() method returns True if all characters in the string are alphanumeric (either alphabets or numbers). If not, it returns False.
+
+name = "M3onica Gell22er "
+print(name.isalnum()) # Output : False
+
+# The isalpha() method returns True if all characters in the string are alphabets. If not, it returns False
+name = "Monica"
+print(name.isalpha()) #output true
+
+# other important functions
+string.strip([chars]) #The strip() method returns a copy of the string by removing both the leading and the trailing characters (based on the string argument passed).
+string.upper() # The upper() method converts all lowercase characters in a string into uppercase characters and returns it.
+string.lower() # The lower() method converts all uppercase characters in a string into lowercase characters and returns it.
+string.islower() # The islower() method returns True if all cased characters in the string are lowercase and there is at least one cased character, False otherwise.
+string.isdigit() 
+string.isupper() # The isupper() method returns True if all cased characters in the string are uppercase and there is at least one cased character, False otherwise.
 ```
+
+# Built-in or Library functions
+
+- Functions to iterate over list / other iterable (tuple, dictionaries)
+    
+    ```python
+    
+    ** map(fun, iter) **
+    # fun : It is a function to which map passes each element of given iterable.
+    # iter : It is a iterable which is to be mapped.
+    
+    ** zip(list,list) **
+    for elem1,elem2 in zip(firstList,secondList):
+    	# will merge both lists and produce tuples with both elements
+    	# Tuples will stop at shortest list (in case of both lists having different len)
+    # Example
+    '''
+    a = ("John", "Charles", "Mike")
+    b = ("Jenny", "Christy", "Monica")
+    
+    x = zip(a, b)
+    
+    # use the tuple() function to display a readable version of the result:
+    
+    print(tuple(x))
+    o/p: (('John', 'Jenny'), ('Charles', 'Christy'), ('Mike', 'Monica'))
+    '''
+    
+    ** any(list) ** [ OPPOSITE IS => ** all() ** ]
+    any(someList) # returns true if ANY element in list is true [any string, all numbers except 0 also count as true]
+    
+    ** enumerate(list|tuple) ** 
+    # [when you need to attach indexes to lists or tuples ]
+    enumerate(anyList) # ['a','b','c'] => [(0, 'a'), (1, 'b'), (2, 'c')]
+    
+    ** filter(function|list) **
+    filter(myFunction,list) # returns list with elements that returned true when passed in function
+    
+    ***************** import bisect ***********************
+    
+    ** bisect.bisect(list,number,begin,end) ** O(log(n))
+    # [ returns the index where the element should be inserted 
+    #		such that sorting order is maintained ]
+    a = [1,2,4]
+    bisect.bisect(a,3,0,4) # [1,2,4] => 3 coz '3' should be inserted in 3rd index to maintain sorting order
+    
+    # Other variants of this functions are => bisect.bisect_left() | bisect.bisect_right()
+    # they have same arguments. Suppose the element we want to insert is already present
+    # in the sorting list, the bisect_left() will return index left of the existing number
+    # and the bisect_right() or bisect() will return index right to the existing number
+    
+    # ** bisect.insort(list,number,begin,end)       ** O(n) to insert
+    # ** bisect.insort_right(list,number,begin,end) ** 
+    # ** bisect.insort_left(list,number,begin,end)  ** 
+    
+    The above 3 functions are exact same of bisect.bisect(), the only difference
+    is that they return the sorted list after inserting and not the index. The
+    left() right() logic is also same as above.
+    ```
+    
+- Getting ASCII value of a character
+    
+    ```python
+    ** ord(str) **
+    # returns ascii value of the character , Example ord("a") = 97
+    ** chr(int) ** 
+    # return character of given ascii value , Example chr(97) = "a"
+    ```
+
 
 ## Deque
 
@@ -327,128 +416,39 @@ tuple.count(1) # returns occurence of an item
 tuple.index(1) # returns index of 1 in array
 ```
 
-## Strings
 
-[Python String isnumeric()](https://www.programiz.com/python-programming/methods/string/isnumeric)
+    
+## Counter
+
+> Python Counter is a container that will hold the count of each of the elements present in the container. The counter is a sub-class available inside the dictionary class. Specifically used for element frequencies
+> 
+
+*Pretty similar to dictionary, in fact I use* **defaultdict(int)** *most of the time* 
 
 ```python
-# ** split Function **
-# The split() method breaks up a string at the specified separator and returns
-# a list of strings.
-text = 'Python is a fun programming language'
+from collections import Counter #(capital 'C')
+# can also be used as 'collections.Counter()' in code
 
-# split the text from space
-print(text.split(' '))
-# Output: ['Python', 'is', 'a', 'fun', 'programming', 'language']
+list1 = ['x','y','z','x','x','x','y', 'z']
 
-# convert string to list
-s="abcd"
-s=list(s)
-print(s)
-# Output: ['a', 'b', 'c', 'd']
+# Initialization
+Counter(list1) # => Counter({'x': 4, 'y': 2, 'z': 2})
+Counter("Welcome to Guru99 Tutorials!") # => Counter({'o': 3, ' ': 3, 'u': 3, 'e': 2.....})
 
-# ** count Function **
-# The count() method returns the number of occurrences of a substring in the given string.
-# Example
-message = 'python is popular programming language'
-# number of occurrence of 'p'
-print('Number of occurrence of p:', message.count('p')) # Output: Number of occurrence of p: 4
+# Updating
+counterObject = collections.Counter(list1)
+counterObject.keys() = [ 'x' , 'y' , 'z' ]
+most_common_element = counterObject.most_common(1) # [('x', 4)]
+counterObject.update("some string") # => Counter({'o': 3, 'u': 3, 'e': 2, 's': 2})
+counterObject['s'] += 1 # Increase/Decrease frequency
 
-# The isnumeric() method returns True if all characters in a string are numeric characters. If not, it returns False.
-s = '1242323'
-print(s.isnumeric()) #Output: True
+# Accessing
+frequency_of_s = counterObject['s']
 
-# The find() method returns the index of first occurrence of the substring (if found). If not found, it returns -1.
-# check the index of 'fun'
-print(message.find('fun')) # Output: 12
+# Deleting
+del couterObject['s']
 
-# The isalnum() method returns True if all characters in the string are alphanumeric (either alphabets or numbers). If not, it returns False.
-
-name = "M3onica Gell22er "
-print(name.isalnum()) # Output : False
-
-# The isalpha() method returns True if all characters in the string are alphabets. If not, it returns False
-name = "Monica"
-print(name.isalpha()) #output true
-
-# other important functions
-string.strip([chars]) #The strip() method returns a copy of the string by removing both the leading and the trailing characters (based on the string argument passed).
-string.upper() # The upper() method converts all lowercase characters in a string into uppercase characters and returns it.
-string.lower() # The lower() method converts all uppercase characters in a string into lowercase characters and returns it.
-string.islower() # The islower() method returns True if all cased characters in the string are lowercase and there is at least one cased character, False otherwise.
-string.isdigit() 
-string.isupper() # The isupper() method returns True if all cased characters in the string are uppercase and there is at least one cased character, False otherwise.
 ```
-
-# Built-in or Library functions
-
-- Functions to iterate over list / other iterable (tuple, dictionaries)
-    
-    ```python
-    
-    ** map(fun, iter) **
-    # fun : It is a function to which map passes each element of given iterable.
-    # iter : It is a iterable which is to be mapped.
-    
-    ** zip(list,list) **
-    for elem1,elem2 in zip(firstList,secondList):
-    	# will merge both lists and produce tuples with both elements
-    	# Tuples will stop at shortest list (in case of both lists having different len)
-    # Example
-    '''
-    a = ("John", "Charles", "Mike")
-    b = ("Jenny", "Christy", "Monica")
-    
-    x = zip(a, b)
-    
-    # use the tuple() function to display a readable version of the result:
-    
-    print(tuple(x))
-    o/p: (('John', 'Jenny'), ('Charles', 'Christy'), ('Mike', 'Monica'))
-    '''
-    
-    ** any(list) ** [ OPPOSITE IS => ** all() ** ]
-    any(someList) # returns true if ANY element in list is true [any string, all numbers except 0 also count as true]
-    
-    ** enumerate(list|tuple) ** 
-    # [when you need to attach indexes to lists or tuples ]
-    enumerate(anyList) # ['a','b','c'] => [(0, 'a'), (1, 'b'), (2, 'c')]
-    
-    ** filter(function|list) **
-    filter(myFunction,list) # returns list with elements that returned true when passed in function
-    
-    ***************** import bisect ***********************
-    
-    ** bisect.bisect(list,number,begin,end) ** O(log(n))
-    # [ returns the index where the element should be inserted 
-    #		such that sorting order is maintained ]
-    a = [1,2,4]
-    bisect.bisect(a,3,0,4) # [1,2,4] => 3 coz '3' should be inserted in 3rd index to maintain sorting order
-    
-    # Other variants of this functions are => bisect.bisect_left() | bisect.bisect_right()
-    # they have same arguments. Suppose the element we want to insert is already present
-    # in the sorting list, the bisect_left() will return index left of the existing number
-    # and the bisect_right() or bisect() will return index right to the existing number
-    
-    # ** bisect.insort(list,number,begin,end)       ** O(n) to insert
-    # ** bisect.insort_right(list,number,begin,end) ** 
-    # ** bisect.insort_left(list,number,begin,end)  ** 
-    
-    The above 3 functions are exact same of bisect.bisect(), the only difference
-    is that they return the sorted list after inserting and not the index. The
-    left() right() logic is also same as above.
-    ```
-    
-- Getting ASCII value of a character
-    
-    ```python
-    ** ord(str) **
-    # returns ascii value of the character , Example ord("a") = 97
-    ** chr(int) ** 
-    # return character of given ascii value , Example chr(97) = "a"
-    ```
-    
-
 # Clean Code Tips
 
 - **Doc Strings -**  Documentation for your functions in the interview to look slick 😎
