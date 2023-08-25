@@ -44,6 +44,11 @@ nums.pop() # pops last element [which element to pop can also be given as option
 nums.reverse() # reverses original list (nums in this case)
 nums.sort() # sorts list [does NOT return sorted list]
 #Python's default sort uses Tim Sort, which is a combination of both merge sort and insertion sort.
+
+nums = sorted(nums) # sorts and returns new list
+nums_string = ' '.join(map(str,nums)) # if list has int values, map converts data type
+nums_string = ' '.join(nums) # if list has string values
+
 ```
 
 List or String slicing in Python
