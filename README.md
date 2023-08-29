@@ -204,6 +204,7 @@ string.lower() # The lower() method converts all uppercase characters in a strin
 string.islower() # The islower() method returns True if all cased characters in the string are lowercase and there is at least one cased character, False otherwise.
 string.isdigit() 
 string.isupper() # The isupper() method returns True if all cased characters in the string are uppercase and there is at least one cased character, False otherwise.
+int(c) # converts char to int
 ```
 
 # Built-in or Library functions
