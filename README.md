@@ -715,6 +715,17 @@ del couterObject['s']
 > Python integer division acts a bit weird with -ve numbers ex: -3//2 will give -2 answer instead of -1 so always use int(-3/2) for integer division in problems
 > 
 
+
+# Class
+``` python
+-Class name starts with capital letter # class Solution:
+-Method name starts with small letters # def isSymmetric(self, root)
+-in python you skip specifying return type for method
+-if you need to create a member function and call it. pass 'self' as parameter to memeber functiona and use self.methodname() to call it
+![image](https://github.com/Manikanta-Gandham/PythonCheatSheet/assets/19523549/2d82216b-614e-49d7-a3ed-60d3efb999d6)
+
+``` 
+
 # Resources
 
 - PDF with all Python Data Structures in-depth
