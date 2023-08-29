@@ -717,12 +717,13 @@ del couterObject['s']
 
 
 # Class
+![image](https://github.com/Manikanta-Gandham/PythonCheatSheet/assets/19523549/2d82216b-614e-49d7-a3ed-60d3efb999d6)
 ``` python
 -Class name starts with capital letter # class Solution:
 -Method name starts with small letters # def isSymmetric(self, root)
 -in python you skip specifying return type for method
 -if you need to create a member function and call it. pass 'self' as parameter to memeber functiona and use self.methodname() to call it
-![image](https://github.com/Manikanta-Gandham/PythonCheatSheet/assets/19523549/2d82216b-614e-49d7-a3ed-60d3efb999d6)
+
 
 ``` 
 
