@@ -589,14 +589,15 @@ del couterObject['s']
     print("Number of list is: ", x)
     ```
 - Arithematic (addition, substraction,multiplication,division)
-   result = 5 + 3  # result is 8
-   result = 10 - 4  # result is 6
-   result = 6 * 7  # result is 42
-   result = 15 / 3   # result is 5.0 # division
-   result = 15 // 3  # result is 5 #Floor Division
-   result = 15 % 4  # result is 3 #Modulus %: Returns the remainder of the division of the left operand by the right operand.
-   result = 2 ** 3  # result is 8 #Exponentiation **: Raises the left operand to the power of the right operand.
-
+  ```python
+       result = 5 + 3  # result is 8
+       result = 10 - 4  # result is 6
+       result = 6 * 7  # result is 42
+       result = 15 / 3   # result is 5.0 # division
+       result = 15 // 3  # result is 5 #Floor Division
+       result = 15 % 4  # result is 3 #Modulus %: Returns the remainder of the division of the left operand by the right operand.
+       result = 2 ** 3  # result is 8 #Exponentiation **: Raises the left operand to the power of the right operand.
+```python
 - Important Python Math Functions
     
     [Python Math Module - GeeksforGeeks](https://www.geeksforgeeks.org/python-math-module/)
