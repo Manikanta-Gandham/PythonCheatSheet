@@ -1,6 +1,6 @@
 
 # Python strings
-In Python, strings are immutable, meaning their values cannot be changed once they're created. For instance, if you have the string "Hello", attempting to modify a character directly, like string[0] = 'J', will result in a TypeError. Instead, you create a new string with the desired changes. For example:
+In Python, strings are immutable, meaning their values cannot be changed once they're created. For instance, if you have the string "Hello", attempting to modify a character directly, like __string[0] = 'J', will result in a XTypeError__. Instead, you create a new string with the desired changes. For example:
 
  ``` python
 Copy code
