@@ -47,6 +47,10 @@ nums.sort(reverse=True) # sort list INPLACE descending order
 #Python's default sort uses Tim Sort, which is a combination of both merge sort and insertion sort.
 
 nums = sorted(nums) # sorts and returns new list
+nums = sorted(numbers, reverse=True) #list sorted in reverse order
+nums = sorted(nums, key=lambda x: x[0])
+
+
 nums_string = ' '.join(map(str,nums)) # if list has int values, map converts data type
 nums_string = ' '.join(nums) # if list has string values
 
