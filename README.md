@@ -48,7 +48,11 @@ nums.sort(reverse=True) # sort list INPLACE descending order
 
 nums = sorted(nums) # sorts and returns new list
 nums = sorted(numbers, reverse=True) #list sorted in reverse order
+
+#list of lists
 nums = sorted(nums, key=lambda x: x[0])
+nums.sort(key=lambda x: x[0])
+
 
 
 nums_string = ' '.join(map(str,nums)) # if list has int values, map converts data type
