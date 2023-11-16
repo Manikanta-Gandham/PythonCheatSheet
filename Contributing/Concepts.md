@@ -73,3 +73,24 @@ class Solution:
         return current_depth
 ```
 
+# Mutable and Immutable
+
+Certainly! Here's a table summarizing some common mutable and immutable objects in Python:
+
+Mutable Objects	Examples
+Lists	my_list = [1, 2, 3]
+Dictionaries	my_dict = {'a': 1, 'b': 2}
+Sets	my_set = {1, 2, 3}
+Byte Arrays	my_bytes = bytearray(b'hello')
+Immutable Objects	Examples
+Integers	x = 5
+Floats	pi = 3.14159
+Strings	s = "Hello, World!"
+Tuples	my_tuple = (1, 2, 3)
+Frozen Sets	my_set = frozenset([1, 2, 3])
+Namedtuples	Point = namedtuple('Point', ['x', 'y'])<br>p = Point(x=1, y=2)
+Enums	from enum import Enum<br>class Color(Enum):<br> RED = 1<br> GREEN = 2<br> BLUE = 3
+Booleans	flag = True
+This table provides a quick overview of common mutable and immutable objects in Python. Keep in mind that this is not an exhaustive list, and there are other mutable and immutable objects in the Python standard library and third-party libraries.
+
+*when you pass immutable object as reference in python it will not be changed*
