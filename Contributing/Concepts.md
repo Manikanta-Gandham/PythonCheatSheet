@@ -42,19 +42,19 @@ In practice, the choice between top-down and bottom-up may depend on the specifi
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
         self.maxLen = 0
-        self.top_down_dfs(root, 0)
+        self.dfs(root, 0)
         return self.maxLen
+    
+    def dfs(self, node, height):
+        # branching condition logic
+        self.maxLen = max(self.maxLen, height)
 
-    def top_down_dfs(self, node, depth):
         if node is None:
             return
 
-        # Update the maximum depth
-        self.maxLen = max(self.maxLen, depth)
+        self.dfs(node.left, height + 1)
+        self.dfs(node.right, height + 1)
 
-        # Recursive calls on the left and right children with increased depth
-        self.top_down_dfs(node.left, depth + 1)
-        self.top_down_dfs(node.right, depth + 1)
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
         return self.bottom_up_dfs(root)
