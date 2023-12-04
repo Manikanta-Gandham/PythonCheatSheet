@@ -17,8 +17,11 @@ modified_string = ''.join(string_list)
 ```
 This approach highlights the immutability concept, as the original string is not modified in place. Instead, a new string is created from a modified list. Overall, the immutability of strings in Python is a conceptual constraint promoting good programming practices rather than a strict technical limitation.
 
-
-
+``` python
+iterating string
+for character in s:
+    print(character)
+```
 
 # Mutable and Immutable
 
