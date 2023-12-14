@@ -213,6 +213,7 @@ string.islower() # The islower() method returns True if all cased characters in 
 string.isdigit() 
 string.isupper() # The isupper() method returns True if all cased characters in the string are uppercase and there is at least one cased character, False otherwise.
 int(c) # converts char to int
+sortedStr = "".join(sorted(str))  #to sort strings
 ```
 
 # Built-in or Library functions
