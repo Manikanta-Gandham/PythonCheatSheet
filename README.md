@@ -381,6 +381,29 @@ print(max_element)
 
 Output will be:
 20
+
+# Using heap for key value pairs
+# Most important
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        map = Counter(nums)
+        lis = []
+
+        #list with dictionary values and keys as set. using - for max heap as default is min heap
+        for i, j in map.items():
+            lis.append([-j,i])
+
+        # heapifys based on -j values (o(n))
+        heapify(lis)
+
+        res = []
+
+        while(k>0):
+            ele = heappop(lis)
+            res.append(ele[1])
+            k = k-1
+            
+        return res
 ```
 
 ## Sets
