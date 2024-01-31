@@ -746,7 +746,6 @@ del couterObject['s']
     
 
 > Python integer division acts a bit weird with -ve numbers ex: -3//2 will give -2 answer instead of -1 so always use int(-3/2) for integer division in problems
-> 
 
 
 # Class
@@ -758,7 +757,21 @@ del couterObject['s']
 -if you need to create a member function and call it. pass 'self' as parameter to memeber functiona and use self.methodname() to call it
 
 
-``` 
+```
+
+# Type
+
+    To get the actual type of an object, you use the built-in type() function. Passing an object as the only parameter will return the type object of that object:
+    ```python
+        >>> type([]) is list
+        True
+        >>> type({}) is dict
+        True
+        >>> type('') is str
+        True
+        >>> type(0) is int
+        True
+    ```
 
 # Resources
 
