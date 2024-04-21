@@ -22,7 +22,7 @@ class Solution(object):
         for i in range(len(nums)):
             self.dfs(nums[i+1:], path + [nums[i]], res)
 
-``` python
+``` 
 
 # Permuations
 
@@ -46,7 +46,7 @@ class Solution(object):
             return
         for i in range(len(nums)):
             self.dfs(nums[:i] + nums[i+1:], path + [nums[i]], res)   
-``` python
+``` 
 # Combinations
 
 Combinations are selections of items from a larger group, where the order doesn't matter. The number of combinations of a set of n elements taken 
@@ -70,5 +70,5 @@ class Solution(object):
             return
         for i in range(len(nums)):
             self.dfs(nums[i+1:], k, path+ [nums[i]], res)
-``` python
+``` 
 ![image](https://github.com/Manikanta-Gandham/PythonCheatSheet/assets/19523549/41a644cb-5625-40fc-9feb-ae6859ed2585)
