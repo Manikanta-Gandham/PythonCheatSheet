@@ -772,6 +772,9 @@ del couterObject['s']
         >>> type(0) is int
         True
     ```
+# Naming Conventions
+<img width="493" height="350" alt="image" src="https://github.com/user-attachments/assets/e79621db-80d9-4539-a27d-27d9e2e4455b" />
+
 
 # Resources
 
